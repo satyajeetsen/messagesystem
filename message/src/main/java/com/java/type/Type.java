@@ -1,5 +1,5 @@
-package com.java.type;
+package com.java.Type;
 
 public enum Type {
-TYPE1,TYPE2,TYPE3
+    Type1,Type2,Type3
 }

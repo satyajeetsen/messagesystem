@@ -3,7 +3,7 @@ package com.java.message;
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
-@JsonPropertyOrder({ "items", "occurances", "price", "adjustments" })
+@JsonPropertyOrder({ "item", "occurances", "price", "adjustment" })
 public class Message {
 
 	public String item;
@@ -11,9 +11,9 @@ public class Message {
 	public int price;
 	public String adjustment;
 
-
-	public Message(String items, int occurances, int price, String adjustments) {
-		this.item = items;
+public Message(){}
+	public Message(String item, int occurances, int price, String adjustment) {
+		this.item = item;
 		this.occurances = occurances;
 		this.price = price;
 		this.adjustment = adjustment;
@@ -37,10 +37,10 @@ public class Message {
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	public String getAdjustments() {
+	public String getAdjustment() {
 		return adjustment;
 	}
-	public void setAdjustments(String adjustments) {
+	public void setAdjustment(String adjustment) {
 		this.adjustment = adjustment;
 	}
 
@@ -50,7 +50,7 @@ public class Message {
                 "item='" + item + '\'' +
                 ", occurances=" + occurances +
                 ", price=" + price +
-                ", adjustments='" + adjustment + '\'' +
+                ", adjustment='" + adjustment + '\'' +
                 '}';
     }
 }
