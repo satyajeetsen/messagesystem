@@ -10,13 +10,28 @@ public class Message {
 	public int occurances;
 	public int price;
 	public String adjustment;
+	public String msg;
 
-public Message(){}
+	public Message(){
+
+	}
+
+public Message(String msg){
+	this.msg= msg;
+}
 	public Message(String item, int occurances, int price, String adjustment) {
 		this.item = item;
 		this.occurances = occurances;
 		this.price = price;
 		this.adjustment = adjustment;
+	}
+
+	public String getMsg() {
+		return msg;
+	}
+
+	public void setMsg(String msg) {
+		this.msg = msg;
 	}
 
 	public String getItem() {

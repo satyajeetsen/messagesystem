@@ -12,7 +12,7 @@ public class Sale {
     public Sale(){
 
     }
-
+    int total;
     Map<String,Integer> itemoccurancemap=new HashMap<String, Integer>();
 
     public Map<String, Integer> getItemoccurancemap() {
@@ -23,6 +23,16 @@ public class Sale {
         this.itemoccurancemap = itemoccurancemap;
     }
 
+
+            public int countofSales(Map<String,Integer> hsm){
+
+                for (Map.Entry<String, Integer> hsmapitr : hsm.entrySet()) {
+
+                    int salescount=(int)hsmapitr.getValue();
+                    total+=salescount;
+                }
+                return total;
+            }
 }
 
 
