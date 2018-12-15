@@ -8,31 +8,41 @@ import java.util.List;
 import java.util.Map;
 
 public class Adjustment {
-private Type[]adjustmentType = new Type[3];
-private String item;
-    Map<String,List<String>> itemAdjustmentMap=new HashMap<String, List<String>>();
+private Type adjustmentType;
+private Integer adjustmentAmount;
 
-    public Type[] getAdjustmentType() {
+    Map<Type,Integer> adjustmentAmountMap=new HashMap<Type, Integer>();
+
+    public Type getAdjustmentType() {
         return adjustmentType;
     }
 
-    public void setAdjustmentType(Type[] adjustmentType) {
+    public void setAdjustmentType(Type adjustmentType) {
         this.adjustmentType = adjustmentType;
     }
 
-    public String getItem() {
-        return item;
+    public Integer getAdjustmentAmount() {
+        return adjustmentAmount;
     }
 
-    public void setItem(String item) {
-        this.item = item;
+    public void setAdjustmentAmount(Integer adjustmentAmount) {
+        this.adjustmentAmount = adjustmentAmount;
     }
 
-    public Map<String, List<String>> getItemAdjustmentMap() {
-        return itemAdjustmentMap;
+    public Map<Type, Integer> getAdjustmentAmountMap() {
+        return adjustmentAmountMap;
     }
 
-    public void setItemAdjustmentMap(Map<String, List<String>> itemAdjustmentMap) {
-        this.itemAdjustmentMap = itemAdjustmentMap;
+    public void setAdjustmentAmountMap(Map<Type, Integer> adjustmentAmountMap) {
+        this.adjustmentAmountMap = adjustmentAmountMap;
+    }
+
+    @Override
+    public String toString() {
+        return "Adjustment{" +
+                "adjustmentType=" + adjustmentType +
+                ", adjustmentAmount=" + adjustmentAmount +
+                '}';
     }
 }
+

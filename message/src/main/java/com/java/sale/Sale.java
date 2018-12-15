@@ -24,15 +24,7 @@ public class Sale {
     }
 
 
-            public int countofSales(Map<String,Integer> hsm){
 
-                for (Map.Entry<String, Integer> hsmapitr : hsm.entrySet()) {
-
-                    int salescount=(int)hsmapitr.getValue();
-                    total+=salescount;
-                }
-                return total;
-            }
 }
 
 

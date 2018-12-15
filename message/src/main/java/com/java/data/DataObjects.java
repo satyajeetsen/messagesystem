@@ -17,10 +17,17 @@ public class DataObjects {
     Adjustment a = new Adjustment();
     Message m;
 
-    List<Message> messageslist = new ArrayList<Message>();
-    Map< String,Integer> hsmap = new HashMap< String,Integer>();
-    Map<String, Double>  productpricemap = s.getItemoccurancemap();
 
+    List<Message> messageslist = new ArrayList<Message>();
+    Map<String, Integer> itemnoofsales = new HashMap<String, Integer>();
+    Product p = new Product();
+    Map<String, Double> productpricemap = p.getItempricemap();
+    Map<String, Integer> productoccurancemap = s.getItemoccurancemap();
+    Map<Type, List<String>> productadjustmentmap = a.getItemAdjustmentMap();
+
+    double total;
+    int message_counter = 0;
+    private int c;
 
     public DataObjects() {
 
@@ -30,49 +37,76 @@ public class DataObjects {
     public List<Message> ReadingDataObjects() throws Exception {
         File testFile = new File("C:\\Users\\Satyajeet Sen\\Desktop\\test.csv");
         List<Message> datalist = new DataReader().readFile(testFile);
-
-        List<String> adjustmentvalue = new ArrayList<String>();
-        List<Message> msglist = new ArrayList<Message>();
-
-
-        int count = 0;
-        int count1 = 0;
-
         List<String> products = new ArrayList<String>();
+        List<String> adjustments = new ArrayList<String>();
 
 
+        adjustments.add("ADD");
+        adjustments.add("SUBTRACT");
+        adjustments.add("MULTIPLY");
 
-        for (Message ms : datalist) {
-            m = new Message(ms.getItem(), ms.getOccurances(), ms.getPrice(), ms.getAdjustment());
+        for (Message msg : datalist) {
+            ++message_counter;
+            m = new Message(msg.getItem(), msg.getOccurances(), msg.getPrice(), msg.getAdjustment());
 
-            products.add(ms.getItem());
-            productpricemap.put(ms.getItem(),ms.getPrice());
+            products.add(msg.getItem());
+
+
+            productpricemap.put(m.getItem(), m.getPrice());
+            if (m.getOccurances() != 0)
+                productoccurancemap.put(m.getItem(), m.getOccurances());
+            itemnoofsales.put(m.getItem(), Collections.frequency(products, m.getItem()));
+            if (m.getAdjustment() != null)
+                productadjustmentmap.put(m.getItem(), adjustments);
+
+            total += Collections.frequency(products, m.getItem());
+            if (message_counter % 10 == 0) {
+                product_salescalculation(message_counter);
+            }
+
+
 
         }
-
-        for(String s: products){
-            hsmap.put(s,Collections.frequency(products, s));
-        }
-product_salescalculation();
-
-
-
-
 
 
         return datalist;
     }
 
 
-    public void product_salescalculation(){
-
-        for(Map.Entry<String,Integer> entry :hsmap.entrySet()){
+    public void product_salescalculation(int count) {
 
 
-            System.out.println("Product " +entry.getKey()+ " has a total "+entry.getValue()+ " sales ");
+        System.out.println("\nReport of total sales per product type at sale count : " + count);
+        for (Map.Entry<String, Integer> entry : itemnoofsales.entrySet()) {
+
+            System.out.println("Product " + entry.getKey() + " has a total " + entry.getValue() + " sales ");
+            System.out.println("Total value of sale : " + (entry.getValue() * productpricemap.get(entry.getKey()) * productoccurancemap.get(entry.getKey())));
+
+
         }
+
+
+          /*  System.out.println("\n*******Application is pausing. A report of adjustments per sale will now be logged");
+
+    Map.Entry<String, Integer> entry : itemnoofsales.entrySet())
+
+    {
+
+
+        System.out.println("Product " + entry.getKey() + " has a total " + entry.getValue() + " sales ");
+        System.out.println("Total value of sale is" + (entry.getValue() * productpricemap.get(entry.getKey()) * productoccurancemap.get(entry.getKey())));
+
+
+    }
+*/
     }
 }
+
+
+
+
+
+
 
 
 
