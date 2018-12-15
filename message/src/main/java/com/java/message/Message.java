@@ -8,7 +8,7 @@ public class Message {
 
 	public String item;
 	public int occurances;
-	public int price;
+	public double price;
 	public String adjustment;
 	public String msg;
 
@@ -19,7 +19,7 @@ public class Message {
 public Message(String msg){
 	this.msg= msg;
 }
-	public Message(String item, int occurances, int price, String adjustment) {
+	public Message(String item, int occurances, double price, String adjustment) {
 		this.item = item;
 		this.occurances = occurances;
 		this.price = price;
@@ -46,10 +46,10 @@ public Message(String msg){
 	public void setOccurances(int occurances) {
 		this.occurances = occurances;
 	}
-	public int getPrice() {
+	public double getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
+	public void setPrice(double price) {
 		this.price = price;
 	}
 	public String getAdjustment() {
