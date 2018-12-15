@@ -19,10 +19,10 @@ public class Main {
 
 
    Sale sale= new Sale();
-   Adjustment adj=new Adjustment();
+
 
    DataObjects data = new DataObjects();
-   List<Message> csvobjects =data.ReadingDataObjects();
+   List<Message> csvobjects =data.readingDataObjects();
 
 
 

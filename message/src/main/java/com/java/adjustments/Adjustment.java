@@ -8,12 +8,40 @@ import java.util.List;
 import java.util.Map;
 
 public class Adjustment {
+    private String name;
 private Type adjustmentType;
-private Integer adjustmentAmount;
+private Double adjustmentAmount;
 
-    Map<Type,Integer> adjustmentAmountMap=new HashMap<Type, Integer>();
+    Map<Type,Double> adjustmentAmountMap=adjustmentAmountMap=new HashMap<Type, Double>();
+    Map<String,List<Type>> itemadjustmentlistmap=new HashMap<String,List<Type>>();
+    public Adjustment(){
 
-    public Type getAdjustmentType() {
+    }
+
+    public Adjustment(Type adjustmentType, Double adjustmentAmount,String name) {
+        this.adjustmentType = adjustmentType;
+        this.adjustmentAmount = adjustmentAmount;
+        this.name=name;
+
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Map<String, List<Type>> getItemadjustmentlistmap() {
+        return itemadjustmentlistmap;
+    }
+
+    public void setItemadjustmentlistmap(Map<String, List<Type>> itemadjustmentlistmap) {
+        this.itemadjustmentlistmap = itemadjustmentlistmap;
+    }
+
+    public Type getAdjustmentString() {
         return adjustmentType;
     }
 
@@ -21,26 +49,27 @@ private Integer adjustmentAmount;
         this.adjustmentType = adjustmentType;
     }
 
-    public Integer getAdjustmentAmount() {
+    public Double getAdjustmentAmount() {
         return adjustmentAmount;
     }
 
-    public void setAdjustmentAmount(Integer adjustmentAmount) {
+    public void setAdjustmentAmount(Double adjustmentAmount) {
         this.adjustmentAmount = adjustmentAmount;
     }
 
-    public Map<Type, Integer> getAdjustmentAmountMap() {
+    public Map<Type, Double> getAdjustmentAmountMap() {
         return adjustmentAmountMap;
     }
 
-    public void setAdjustmentAmountMap(Map<Type, Integer> adjustmentAmountMap) {
+    public void setAdjustmentAmountMap(Map<Type, Double> adjustmentAmountMap) {
         this.adjustmentAmountMap = adjustmentAmountMap;
     }
 
     @Override
     public String toString() {
         return "Adjustment{" +
-                "adjustmentType=" + adjustmentType +
+                "name='" + name + '\'' +
+                ", adjustmentType=" + adjustmentType +
                 ", adjustmentAmount=" + adjustmentAmount +
                 '}';
     }
