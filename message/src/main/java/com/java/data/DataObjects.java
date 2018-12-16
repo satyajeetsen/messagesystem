@@ -77,7 +77,7 @@ public class DataObjects {
                 product_salescalculation(message_counter);
             }
             if(message_counter % 50 ==0){
-                product_adjustmentcalculation(productadjlist,message_counter);
+                product_adjustmentcalculation(productadjlist,message_counter,adjustmentamtmap);
                 product_salescalculation(message_counter);
             }
 
@@ -103,17 +103,19 @@ public class DataObjects {
         }
 
     }
-    public void product_adjustmentcalculation(Map<String,List<Type>> mp,int count) {
-
+    public void product_adjustmentcalculation(Map<String,List<Type>> mp,int count,Map<Type,Double> map) {
+      int i=0;
         System.out.println("\n*******Application is pausing. A report of adjustments per sale will now be logged");
 
         for (Map.Entry<String,List<Type>> entry1 : mp.entrySet()) {
-              int i=0;
+              i++;
             System.out.println("\nProduct type " + ": " + entry1.getKey() + " has total " + entry1.getValue().size()
-                    + " adjustments\n" + entry1.getValue().get(i++));
-            System.out.println(a.toString());
-            
+                    + " adjustments\n"+entry1.getValue().get(i) );
+
+           // System.out.println(entry1.getValue().get(i).getDeclaringClass().toString());
+
         System.out.println();
+
 
 
     }
