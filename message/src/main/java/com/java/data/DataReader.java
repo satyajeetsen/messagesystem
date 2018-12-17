@@ -8,12 +8,12 @@ import java.io.File;
 import java.util.List;
 
 
-
 public class DataReader {
-	public static List<Message> globallist;
-	public  List<Message> readFile(File csvFile) throws Exception {
-		MappingIterator<Message> dataIter = new CsvMapper().readerWithTypedSchemaFor(Message.class).readValues(csvFile);
+    public static List<Message> globallist;
 
-		return dataIter.readAll();
-	}
+    public List<Message> readFile(File csvFile) throws Exception {
+        MappingIterator<Message> dataIter = new CsvMapper().readerWithTypedSchemaFor(Message.class).readValues(csvFile);
+
+        return dataIter.readAll();
+    }
 }
