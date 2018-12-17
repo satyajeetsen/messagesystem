@@ -1,5 +1,7 @@
 package com.java.product;
 
+import com.java.sale.Sale;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -11,7 +13,8 @@ public class Product {
 
 
 
-	Map<String,Double> itempricemap = new HashMap<String,Double>();
+
+
 
 
 	public Product(){
@@ -22,13 +25,9 @@ public class Product {
 		this.price = price;
 	}
 
-	public Map<String, Double> getItempricemap() {
-		return itempricemap;
-	}
 
-	public void setItempricemap(Map<String, Double> itempricemap) {
-		this.itempricemap = itempricemap;
-	}
+
+
 
 	public String getName() {
 		return name;
@@ -54,17 +53,7 @@ public class Product {
 				'}';
 	}
 
-	@Override
-	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (!(o instanceof Product)) return false;
-		Product product = (Product) o;
-		return Double.compare(product.price, price) == 0 &&
-				name.equals(product.name);
-	}
 
-	@Override
-	public int hashCode() {
-		return Objects.hash(name,price);
-	}
+
+
 }

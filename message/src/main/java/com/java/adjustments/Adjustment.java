@@ -3,6 +3,7 @@ package com.java.adjustments;
 import com.java.Type.Type;
 import com.java.product.Product;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -11,9 +12,9 @@ public class Adjustment {
     private String name;
 private Type adjustmentType;
 private Double adjustmentAmount;
-
-    Map<Type,Double> adjustmentAmountMap=adjustmentAmountMap=new HashMap<Type, Double>();
-    Map<String,List<Type>> itemadjustmentlistmap=new HashMap<String,List<Type>>();
+private Map<Type,Double> adjustmentAmountMap=adjustmentAmountMap=new HashMap<Type, Double>();
+private Map<String,List<Type>> itemadjustmentlistmap=new HashMap<String,List<Type>>();
+List<Type> msglist = new ArrayList<Type>();
     public Adjustment(){
 
     }
@@ -41,7 +42,7 @@ private Double adjustmentAmount;
         this.itemadjustmentlistmap = itemadjustmentlistmap;
     }
 
-    public Type getAdjustmentString() {
+    public Type getAdjustmentType() {
         return adjustmentType;
     }
 
@@ -63,6 +64,25 @@ private Double adjustmentAmount;
 
     public void setAdjustmentAmountMap(Map<Type, Double> adjustmentAmountMap) {
         this.adjustmentAmountMap = adjustmentAmountMap;
+    }
+
+    public void product_adjustmentcalculation(Map<String,List<Type>> mp,int count,Map<Type,Double> map) {
+        int i=0;
+        System.out.println("\n*******Application is pausing. A report of adjustments per sale will now be logged");
+
+        for (Map.Entry<String,List<Type>> entry1 : mp.entrySet()) {
+            i++;
+            System.out.println("\nProduct type " + ": " + entry1.getKey() + " has total " + entry1.getValue().size()
+                    + " adjustments\n"+entry1.getValue().get(i) );
+
+            System.out.println(toString());
+
+            System.out.println();
+
+
+
+        }
+
     }
 
     @Override

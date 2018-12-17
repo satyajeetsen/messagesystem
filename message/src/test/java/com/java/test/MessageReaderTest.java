@@ -18,8 +18,8 @@ public class MessageReaderTest extends ExternalResource {
 
 DataReader dr = new DataReader();
 	@Test
-	public void testReadingPersonObjectsFromCsvData() throws Exception {
-		File testFile = new File("src/test/test.csv");
+	public List<Message> testReadingPersonObjectsFromCsvData() throws Exception {
+		File testFile = new File("src/test/resources/test.csv");
 		List<Message> datalist = dr.readFile(testFile);
 		assertEquals(62, datalist.size());
 
@@ -27,9 +27,9 @@ DataReader dr = new DataReader();
 
 		Message dt1 = datalist.get(0);
 		assertEquals("LAPTOP", dt1.getItem());
-		assertEquals(2, dt1.getOccurances());
+		assertEquals(0, dt1.getOccurances());
 		assertEquals(20.0, dt1.getPrice(),0);
-		assertEquals("ADD", dt1.getAdjustment());
+		assertEquals("", dt1.getAdjustment());
 
 		Message dt2 = datalist.get(1);
 		assertEquals("IPAD", dt2.getItem());
@@ -45,11 +45,11 @@ DataReader dr = new DataReader();
 		assertEquals("MOBILE", dt3.getItem());
 		assertEquals(2, dt3.getOccurances());
 		assertEquals(10.0, dt3.getPrice(),0);
-		assertEquals("", dt3.getAdjustment());
+		assertEquals("ADD", dt3.getAdjustment());
 
 		Message dt4 = datalist.get(3);
 		assertEquals("IPOD", dt4.getItem());
-		assertEquals(1, dt4.getOccurances());
+		assertEquals(0, dt4.getOccurances());
 		assertEquals(20.0, dt4.getPrice(),0);
 		assertEquals("", dt4.getAdjustment());
 
@@ -61,6 +61,6 @@ DataReader dr = new DataReader();
 		assertEquals(50.0, dt5.getPrice(),0);
 		assertEquals("", dt5.getAdjustment());
 		
-		
+		return datalist;
 	}
 }
