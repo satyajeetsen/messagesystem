@@ -19,7 +19,6 @@ import static org.junit.Assert.assertThat;
 public class DataObjectTest {
 
 
-
     MessageReaderTest mrt = new MessageReaderTest();
     DataObjects d = new DataObjects();
     Adjustment ad = new Adjustment();
@@ -48,7 +47,7 @@ public class DataObjectTest {
     Map<String, Double> productpricemap = sale.getItempricemap();
     Map<String, Integer> productoccurancemap = sale.getItemoccurancemap();
     Map<Type, Double> adjustmentamtmap = ad.getAdjustmentAmountMap();
-    Map<String,List<String>> productadjlist = ad.getItemadjustmentlistmap();
+    Map<String, List<String>> productadjlist = ad.getItemadjustmentlistmap();
     Map<String, Integer> productnoofsalesmap = sale.getItemnoofsales();
     Type type1 = Type.ADD;
     Type type2 = Type.SUBTRACT;
@@ -56,14 +55,12 @@ public class DataObjectTest {
     Type type4;
 
 
-
     @Test
     public void populateMessageType1() throws Exception {
-        if(!msg.getAdjustment().isEmpty())
-        {
-             type1 = Type.valueOf(msg.getAdjustment().toUpperCase());
-             type2 = Type.valueOf(msg1.getAdjustment().toUpperCase());
-             type3 = Type.valueOf(msg2.getAdjustment().toUpperCase());
+        if (!msg.getAdjustment().isEmpty()) {
+            type1 = Type.valueOf(msg.getAdjustment().toUpperCase());
+            type2 = Type.valueOf(msg1.getAdjustment().toUpperCase());
+            type3 = Type.valueOf(msg2.getAdjustment().toUpperCase());
         }
 
         assertEquals("LAPTOP", msg.getItem());
@@ -82,11 +79,11 @@ public class DataObjectTest {
         assertEquals(3, msg1.getOccurances());
         assertEquals(30.0, msg1.getPrice());
         assertEquals("", msg1.getAdjustment());
-        productoccurancemap.put(msg1.getItem(),msg1.getOccurances());
-        productnoofsalesmap.put(msg1.getItem(),msg1.getOccurances());
-        productpricemap.put(msg1.getItem(),msg1.getPrice());
-        adjustmentamtmap.put(type2,msg1.getPrice());
-      //  productadjlist.put(msg1.getItem(), );
+        productoccurancemap.put(msg1.getItem(), msg1.getOccurances());
+        productnoofsalesmap.put(msg1.getItem(), msg1.getOccurances());
+        productpricemap.put(msg1.getItem(), msg1.getPrice());
+        adjustmentamtmap.put(type2, msg1.getPrice());
+        //  productadjlist.put(msg1.getItem(), );
 
     }
 
@@ -103,15 +100,14 @@ public class DataObjectTest {
     }
 
     @Test
-    public void mapTestType1()throws Exception {
-
+    public void mapTestType1() throws Exception {
 
 
         productoccurancemap.put(msg.getItem(), msg.getOccurances());
         productnoofsalesmap.put(msg.getItem(), msg.getOccurances());
         productpricemap.put(msg.getItem(), msg.getPrice());
         adjustmentamtmap.put(type4, msg.getPrice());
-      //  productadjlist.put(msg.getItem(), Arrays.asList(Type.values()));
+        //  productadjlist.put(msg.getItem(), Arrays.asList(Type.values()));
         sale.setItemoccurancemap(productoccurancemap);
         sale.setItemnoofsales(productnoofsalesmap);
         sale.setItempricemap(productpricemap);
@@ -138,51 +134,50 @@ public class DataObjectTest {
         }
     }
 
-        @Test
-        public void mapTestType2() throws Exception {
+    @Test
+    public void mapTestType2() throws Exception {
 
 
+        productoccurancemap.put(msg1.getItem(), msg1.getOccurances());
+        productnoofsalesmap.put(msg1.getItem(), msg1.getOccurances());
+        productpricemap.put(msg1.getItem(), msg1.getPrice());
+        adjustmentamtmap.put(type4, msg1.getPrice());
+        //    productadjlist.put(msg1.getItem(),(String)Arrays.asList(Type.values()));
+        sale.setItemoccurancemap(productoccurancemap);
+        sale.setItemnoofsales(productnoofsalesmap);
+        sale.setItempricemap(productpricemap);
+        ad.setItemadjustmentlistmap(productadjlist);
+        ad.setAdjustmentAmountMap(adjustmentamtmap);
+        pr.setName(msg1.getItem());
+        pr.setPrice(msg1.getPrice());
+        sale.setProduct(pr);
+        if (!msg.getAdjustment().isEmpty())
+            ad.setAdjustmentType(type4);
+        ad.setAdjustmentAmount(msg1.getPrice());
 
-            productoccurancemap.put(msg1.getItem(),msg1.getOccurances());
-            productnoofsalesmap.put(msg1.getItem(),msg1.getOccurances());
-            productpricemap.put(msg1.getItem(),msg1.getPrice());
-            adjustmentamtmap.put(type4,msg1.getPrice());
-       //    productadjlist.put(msg1.getItem(),(String)Arrays.asList(Type.values()));
-            sale.setItemoccurancemap(productoccurancemap);
-            sale.setItemnoofsales(productnoofsalesmap);
-            sale.setItempricemap(productpricemap);
-            ad.setItemadjustmentlistmap(productadjlist);
-            ad.setAdjustmentAmountMap(adjustmentamtmap);
-            pr.setName(msg1.getItem());
-            pr.setPrice(msg1.getPrice());
-            sale.setProduct(pr);
-            if(!msg.getAdjustment().isEmpty())
-                ad.setAdjustmentType(type4);
-            ad.setAdjustmentAmount(msg1.getPrice());
+        if (msg.getOccurances() > 1) {
+            // System.out.println(sale.getItemoccurancemap().get(msg.getItem()));
 
-            if (msg.getOccurances() > 1) {
-                // System.out.println(sale.getItemoccurancemap().get(msg.getItem()));
+            assertEquals(4, productoccurancemap.get(msg1.getItem()).intValue());
+            assert (sale.getItemoccurancemap().containsValue(msg1.getOccurances()));
+            assert (ad.getItemadjustmentlistmap().containsKey(msg1.getItem()));
+            assert (ad.getItemadjustmentlistmap().containsValue(Arrays.asList(Type.values())));
+            assert (ad.getAdjustmentAmountMap().containsKey(ad.getAdjustmentType()));
+            assert (ad.getAdjustmentAmountMap().containsValue(msg1.getPrice()));
+            assertEquals(30.0, sale.getItempricemap().get(msg1.getItem()));
 
-                assertEquals(4,productoccurancemap.get(msg1.getItem()).intValue());
-                assert (sale.getItemoccurancemap().containsValue(msg1.getOccurances()));
-                assert (ad.getItemadjustmentlistmap().containsKey(msg1.getItem()));
-                assert (ad.getItemadjustmentlistmap().containsValue(Arrays.asList(Type.values())));
-                assert (ad.getAdjustmentAmountMap().containsKey(ad.getAdjustmentType()));
-                assert (ad.getAdjustmentAmountMap().containsValue(msg1.getPrice()));
-                assertEquals(30.0,sale.getItempricemap().get(msg1.getItem()));
-
-            }
+        }
     }
+
     @Test
     public void mapTestType3() throws Exception {
 
 
-
-        productoccurancemap.put(msg2.getItem(),msg2.getOccurances());
-        productnoofsalesmap.put(msg2.getItem(),msg2.getOccurances());
-        productpricemap.put(msg2.getItem(),msg2.getPrice());
-        adjustmentamtmap.put(type1,msg2.getPrice());
-      //  productadjlist.put(msg2.getItem(),Arrays.asList(Type.values()));
+        productoccurancemap.put(msg2.getItem(), msg2.getOccurances());
+        productnoofsalesmap.put(msg2.getItem(), msg2.getOccurances());
+        productpricemap.put(msg2.getItem(), msg2.getPrice());
+        adjustmentamtmap.put(type1, msg2.getPrice());
+        //  productadjlist.put(msg2.getItem(),Arrays.asList(Type.values()));
         sale.setItemoccurancemap(productoccurancemap);
         sale.setItemnoofsales(productnoofsalesmap);
         sale.setItempricemap(productpricemap);
@@ -192,22 +187,22 @@ public class DataObjectTest {
         pr.setName(msg2.getItem());
         pr.setPrice(msg2.getPrice());
         sale.setProduct(pr);
-        if(!msg.getAdjustment().isEmpty())
+        if (!msg.getAdjustment().isEmpty())
             ad.setAdjustmentType(type4);
         ad.setAdjustmentAmount(msg2.getPrice());
 
 
-            // System.out.println(sale.getItemoccurancemap().get(msg.getItem()));
+        // System.out.println(sale.getItemoccurancemap().get(msg.getItem()));
 
-            assertEquals(2,productoccurancemap.get(msg2.getItem()).intValue());
-            assert (sale.getItemoccurancemap().containsValue(msg2.getOccurances()));
-            assert (ad.getItemadjustmentlistmap().containsKey(msg2.getItem()));
-            assert (ad.getItemadjustmentlistmap().containsValue(Arrays.asList(Type.values())));
+        assertEquals(2, productoccurancemap.get(msg2.getItem()).intValue());
+        assert (sale.getItemoccurancemap().containsValue(msg2.getOccurances()));
+        assert (ad.getItemadjustmentlistmap().containsKey(msg2.getItem()));
+        assert (ad.getItemadjustmentlistmap().containsValue(Arrays.asList(Type.values())));
         assert (ad.getAdjustmentAmountMap().containsKey(ad.getAdjustmentType()));
-            assert (ad.getAdjustmentAmountMap().containsValue(msg2.getPrice()));
-            assertEquals(10.0,productpricemap.get(msg2.getItem()));
+        assert (ad.getAdjustmentAmountMap().containsValue(msg2.getPrice()));
+        assertEquals(10.0, productpricemap.get(msg2.getItem()));
 
-        }
     }
+}
 
 
