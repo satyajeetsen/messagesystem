@@ -13,8 +13,9 @@ public class Adjustment {
 private Type adjustmentType;
 private Double adjustmentAmount;
 private Map<Type,Double> adjustmentAmountMap=adjustmentAmountMap=new HashMap<Type, Double>();
-private Map<String,List<Type>> itemadjustmentlistmap=new HashMap<String,List<Type>>();
-List<Type> msglist = new ArrayList<Type>();
+private Map<String,List<String>> itemadjustmentlistmap=new HashMap<String,List<String>>();
+    private Map<String,Integer> productnoofadj=new HashMap<String,Integer>();
+
     public Adjustment(){
 
     }
@@ -34,11 +35,19 @@ List<Type> msglist = new ArrayList<Type>();
         this.name = name;
     }
 
-    public Map<String, List<Type>> getItemadjustmentlistmap() {
+    public Map<String, Integer> getProductnoofadj() {
+        return productnoofadj;
+    }
+
+    public void setProductnoofadj(Map<String, Integer> productnoofadj) {
+        this.productnoofadj = productnoofadj;
+    }
+
+    public Map<String, List<String>> getItemadjustmentlistmap() {
         return itemadjustmentlistmap;
     }
 
-    public void setItemadjustmentlistmap(Map<String, List<Type>> itemadjustmentlistmap) {
+    public void setItemadjustmentlistmap(Map<String, List<String>> itemadjustmentlistmap) {
         this.itemadjustmentlistmap = itemadjustmentlistmap;
     }
 
@@ -66,16 +75,31 @@ List<Type> msglist = new ArrayList<Type>();
         this.adjustmentAmountMap = adjustmentAmountMap;
     }
 
-    public void product_adjustmentcalculation(Map<String,List<Type>> mp,int count,Map<Type,Double> map) {
+    @Override
+    public String toString() {
+        return "Adjustment{" +
+                "adjustmentType=" + adjustmentType +
+                ", adjustmentAmount=" + adjustmentAmount +
+                '}';
+    }
+
+    public void product_adjustmentcalculation(Map<String,Integer> mp, int count, Map<Type,Double> map) {
         int i=0;
         System.out.println("\n*******Application is pausing. A report of adjustments per sale will now be logged");
 
-        for (Map.Entry<String,List<Type>> entry1 : mp.entrySet()) {
-            i++;
-            System.out.println("\nProduct type " + ": " + entry1.getKey() + " has total " + entry1.getValue().size()
-                    + " adjustments\n"+entry1.getValue().get(i) );
+        for (Map.Entry<String,Integer> entry1 : mp.entrySet()) {
 
-            System.out.println(toString());
+            System.out.println("\nProduct type " + ": " + entry1.getKey() + " has total " + entry1.getValue()
+                    + " adjustments\n");
+            for (Map.Entry<Type,Double> entry2 : map.entrySet()) {
+                System.out.println(entry2.getKey());
+                System.out.println("Adjustment{" +
+                        "adjustmentType=" + entry2.getKey() +
+                        ", adjustmentAmount=" + entry2.getValue() +
+                        '}');
+
+            }
+
 
             System.out.println();
 
@@ -85,13 +109,5 @@ List<Type> msglist = new ArrayList<Type>();
 
     }
 
-    @Override
-    public String toString() {
-        return "Adjustment{" +
-                "name='" + name + '\'' +
-                ", adjustmentType=" + adjustmentType +
-                ", adjustmentAmount=" + adjustmentAmount +
-                '}';
-    }
 }
 

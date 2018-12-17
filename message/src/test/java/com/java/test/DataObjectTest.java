@@ -10,6 +10,7 @@ import com.java.sale.Sale;
 
 import org.junit.Test;
 
+import java.io.IOException;
 import java.util.*;
 
 import static junit.framework.TestCase.assertEquals;
@@ -31,14 +32,23 @@ public class DataObjectTest {
     Product pr1 = new Product();
     Product pr2 = new Product();
 
-    List<Message> datalist = d.readingDataObjects();
+    List<Message> datalist;
+
+    {
+        try {
+            datalist = d.readingDataObjects();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     Message msg = datalist.get(0);
     Message msg1 = datalist.get(1);
     Message msg2 = datalist.get(2);
     Map<String, Double> productpricemap = sale.getItempricemap();
     Map<String, Integer> productoccurancemap = sale.getItemoccurancemap();
     Map<Type, Double> adjustmentamtmap = ad.getAdjustmentAmountMap();
-    Map<String,List<Type>> productadjlist = ad.getItemadjustmentlistmap();
+    Map<String,List<String>> productadjlist = ad.getItemadjustmentlistmap();
     Map<String, Integer> productnoofsalesmap = sale.getItemnoofsales();
     Type type1 = Type.ADD;
     Type type2 = Type.SUBTRACT;
@@ -76,7 +86,7 @@ public class DataObjectTest {
         productnoofsalesmap.put(msg1.getItem(),msg1.getOccurances());
         productpricemap.put(msg1.getItem(),msg1.getPrice());
         adjustmentamtmap.put(type2,msg1.getPrice());
-        productadjlist.put(msg1.getItem(), Arrays.asList(Type.values()));
+      //  productadjlist.put(msg1.getItem(), );
 
     }
 
@@ -101,7 +111,7 @@ public class DataObjectTest {
         productnoofsalesmap.put(msg.getItem(), msg.getOccurances());
         productpricemap.put(msg.getItem(), msg.getPrice());
         adjustmentamtmap.put(type4, msg.getPrice());
-        productadjlist.put(msg.getItem(), Arrays.asList(Type.values()));
+      //  productadjlist.put(msg.getItem(), Arrays.asList(Type.values()));
         sale.setItemoccurancemap(productoccurancemap);
         sale.setItemnoofsales(productnoofsalesmap);
         sale.setItempricemap(productpricemap);
@@ -127,6 +137,7 @@ public class DataObjectTest {
 
         }
     }
+
         @Test
         public void mapTestType2() throws Exception {
 
@@ -136,7 +147,7 @@ public class DataObjectTest {
             productnoofsalesmap.put(msg1.getItem(),msg1.getOccurances());
             productpricemap.put(msg1.getItem(),msg1.getPrice());
             adjustmentamtmap.put(type4,msg1.getPrice());
-            productadjlist.put(msg1.getItem(),Arrays.asList(Type.values()));
+       //    productadjlist.put(msg1.getItem(),(String)Arrays.asList(Type.values()));
             sale.setItemoccurancemap(productoccurancemap);
             sale.setItemnoofsales(productnoofsalesmap);
             sale.setItempricemap(productpricemap);
@@ -171,7 +182,7 @@ public class DataObjectTest {
         productnoofsalesmap.put(msg2.getItem(),msg2.getOccurances());
         productpricemap.put(msg2.getItem(),msg2.getPrice());
         adjustmentamtmap.put(type1,msg2.getPrice());
-        productadjlist.put(msg2.getItem(),Arrays.asList(Type.values()));
+      //  productadjlist.put(msg2.getItem(),Arrays.asList(Type.values()));
         sale.setItemoccurancemap(productoccurancemap);
         sale.setItemnoofsales(productnoofsalesmap);
         sale.setItempricemap(productpricemap);
@@ -195,7 +206,7 @@ public class DataObjectTest {
         assert (ad.getAdjustmentAmountMap().containsKey(ad.getAdjustmentType()));
             assert (ad.getAdjustmentAmountMap().containsValue(msg2.getPrice()));
             assertEquals(10.0,productpricemap.get(msg2.getItem()));
-        
+
         }
     }
 
