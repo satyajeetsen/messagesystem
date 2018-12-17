@@ -35,7 +35,7 @@ public class DataObjects {
     }
 
     public List<Message> readingDataObjects() throws Exception {
-
+//reading from a file
         File testFile = new File("src/resources/java/test.csv");
         List<Message> datalist = null;
         try {
@@ -46,38 +46,44 @@ public class DataObjects {
         List<String> products = new ArrayList<String>();
         List<String> adjlist = new ArrayList<String>();
 
-
+//iterating over datalist
         for (Message msg : datalist) {
             ++message_counter;
-
+//instantiating message object
             m = new Message(msg.getItem(), msg.getOccurances(), msg.getPrice(),
                     msg.getAdjustment());
-
+//if adjustment not empty
             if (!msg.getAdjustment().isEmpty()) {
                 type1 = Type.valueOf(msg.getAdjustment().toUpperCase());
                 a = new Adjustment(type1, msg.getPrice(), msg.getItem());
-
+//adding adjustment to list
                 adjlist.add(m.getAdjustment());
             }
-
+//adding item to product
             products.add(msg.getItem());
 
-
+//putting items and price into map object
             productpricemap.put(m.getItem(), m.getPrice());
+            //check if occurances not equal to zero
             if (m.getOccurances() != 0)
+                // adding item and occurances to productoccurance map
                 productoccurancemap.put(m.getItem(), m.getOccurances());
+            //calculating occurances of each item in product list
             productnoofsalesmap.put(m.getItem(), Collections.frequency(products, m.getItem()));
 
             if (m.getAdjustment() != null && m.getOccurances() != 0) {
-
+////putting values of adjustment type and price in map object
                 adjustmentamtmap.put(type1, m.getPrice());
-
+//calculating occurancesof an item in adjustment list
                 itemnoofadj.put(m.getItem(), Collections.frequency(adjlist, "ADD"));
                 productadjlist.put(m.getItem(), adjlist);
             }
+
+            //for every 10processed list or message put a logger alert
             if (message_counter % 10 == 0) {
                 s.product_salescalculation(message_counter);
             }
+            //for every 50 processed list or message put logger alert to stop receiving messages
             if (message_counter % 50 == 0) {
                 a.product_adjustmentcalculation(itemnoofadj, message_counter, adjustmentamtmap, m);
                 s.product_salescalculation(message_counter);
