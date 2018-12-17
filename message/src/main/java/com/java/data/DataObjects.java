@@ -36,7 +36,7 @@ public class DataObjects {
 
     public List<Message> readingDataObjects() throws Exception {
 
-        File testFile = new File("C:\\Users\\Satyajeet Sen\\Desktop\\test.csv");
+        File testFile = new File("src/resources/java/test.csv");
         List<Message> datalist = null;
         try {
             datalist = new DataReader().readFile(testFile);
