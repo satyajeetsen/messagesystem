@@ -12,13 +12,17 @@ public class Adjustment {
     private String name;
     private Type adjustmentType;
     private Double adjustmentAmount;
+
     private Map<Type, Double> adjustmentAmountMap = adjustmentAmountMap = new HashMap<Type, Double>();
     private Map<String, List<String>> itemadjustmentlistmap = new HashMap<String, List<String>>();
     private Map<String, Integer> productnoofadj = new HashMap<String, Integer>();
+    private Map<String, List<Adjustment>> itemadjmap=new HashMap<>();
 
-    public Adjustment() {
+
+    public Adjustment(){
 
     }
+
 
     public Adjustment(Type adjustmentType, Double adjustmentAmount, String name) {
         this.adjustmentType = adjustmentType;
@@ -82,19 +86,25 @@ public class Adjustment {
                 '}';
     }
 
+    public Map<String, List<Adjustment>> getItemadjmap() {
+        return itemadjmap;
+    }
 
-    public void product_adjustmentcalculation(Map<String, Integer> mp, int count, Map<Type, Double> map, Message obj) {
+    public void setItemadjmap(Map<String, List<Adjustment>> itemadjmap) {
+        this.itemadjmap = itemadjmap;
+    }
+
+    public void product_adjustmentcalculation(Map<String, Integer> mp, int count, Map<Type, Double> map, Message obj,Product p) {
         int i = 0;
         System.out.println("\n*******Application is pausing. A report of adjustments per sale will now be logged");
         List<String> ls = new ArrayList<>();
-        for (String o : ls)
-            ls.add(o);
 
-        Set<String> dup = new HashSet<>(ls);
+
+
         for (Map.Entry<String, Integer> entry1 : mp.entrySet()) {
             i++;
-            if (obj.getAdjustment() != null) {
-                System.out.println("\nProduct type " + ": " + entry1.getKey() + " has total " + entry1.getValue()
+
+                System.out.println("\nProduct type " + ": " + entry1.getKey()+ " has total " + entry1.getValue()
                         + " adjustments.");
 
             }
@@ -103,7 +113,7 @@ public class Adjustment {
         }
 
     }
-}
+
 
 
 
