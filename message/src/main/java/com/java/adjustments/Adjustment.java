@@ -97,7 +97,7 @@ public class Adjustment {
     public void product_adjustmentcalculation(Map<String, Integer> mp, int count, Map<Type, Double> map, Message obj,Product p) {
         int i = 0;
         System.out.println("\n*******Application is pausing. A report of adjustments per sale will now be logged");
-        List<String> ls = new ArrayList<>();
+
 
 
 
@@ -108,6 +108,7 @@ public class Adjustment {
                         + " adjustments.");
 
             }
+        
 
 
         }

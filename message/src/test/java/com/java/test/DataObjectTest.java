@@ -47,7 +47,7 @@ public class DataObjectTest {
     Map<String, Double> productpricemap = sale.getItempricemap();
     Map<String, Integer> productoccurancemap = sale.getItemoccurancemap();
     Map<Type, Double> adjustmentamtmap = ad.getAdjustmentAmountMap();
-  //  Map<String, List<String>> productadjlist = ad.getItemadjustmentlistmap();
+    Map<String, List<String>> productadjlist = ad.getItemadjustmentlistmap();
     Map<String, Integer> productnoofsalesmap = sale.getItemnoofsales();
     Type type1 = Type.ADD;
     Type type2 = Type.SUBTRACT;
@@ -142,7 +142,7 @@ public class DataObjectTest {
         productnoofsalesmap.put(msg1.getItem(), msg1.getOccurances());
         productpricemap.put(msg1.getItem(), msg1.getPrice());
         adjustmentamtmap.put(type4, msg1.getPrice());
-        //    productadjlist.put(msg1.getItem(),(String)Arrays.asList(Type.values()));
+       // productadjlist.put(msg1.getItem(),(String)Arrays.asList(Type.values()));
         sale.setItemoccurancemap(productoccurancemap);
         sale.setItemnoofsales(productnoofsalesmap);
         sale.setItempricemap(productpricemap);
@@ -177,7 +177,7 @@ public class DataObjectTest {
         productnoofsalesmap.put(msg2.getItem(), msg2.getOccurances());
         productpricemap.put(msg2.getItem(), msg2.getPrice());
         adjustmentamtmap.put(type1, msg2.getPrice());
-        //  productadjlist.put(msg2.getItem(),Arrays.asList(Type.values()));
+     //   productadjlist.put(msg2.getItem(),Arrays.asList(Type.values()));
         sale.setItemoccurancemap(productoccurancemap);
         sale.setItemnoofsales(productnoofsalesmap);
         sale.setItempricemap(productpricemap);
