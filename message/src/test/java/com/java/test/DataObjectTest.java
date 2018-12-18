@@ -46,8 +46,8 @@ public class DataObjectTest {
     Message msg2 = datalist.get(2);
     Map<String, Double> productpricemap = sale.getItempricemap();
     Map<String, Integer> productoccurancemap = sale.getItemoccurancemap();
-    Map<Type, Double> adjustmentamtmap = ad.getAdjustmentAmountMap();
-    Map<String, List<String>> productadjlist = ad.getItemadjustmentlistmap();
+    Map<Adjustment, Double> adjustmentamtmap = ad.getAdjustmentAmountMap();
+    Map<String, List<Type>> productadjlist = ad.getItemadjustmentlistmap();
     Map<String, Integer> productnoofsalesmap = sale.getItemnoofsales();
     Type type1 = Type.ADD;
     Type type2 = Type.SUBTRACT;
@@ -82,7 +82,7 @@ public class DataObjectTest {
         productoccurancemap.put(msg1.getItem(), msg1.getOccurances());
         productnoofsalesmap.put(msg1.getItem(), msg1.getOccurances());
         productpricemap.put(msg1.getItem(), msg1.getPrice());
-        adjustmentamtmap.put(type2, msg1.getPrice());
+    //    adjustmentamtmap.put(type2, msg1.getPrice());
         //  productadjlist.put(msg1.getItem(), );
 
     }
@@ -106,7 +106,7 @@ public class DataObjectTest {
         productoccurancemap.put(msg.getItem(), msg.getOccurances());
         productnoofsalesmap.put(msg.getItem(), msg.getOccurances());
         productpricemap.put(msg.getItem(), msg.getPrice());
-        adjustmentamtmap.put(type4, msg.getPrice());
+     //   adjustmentamtmap.put(type4, msg.getPrice());
         //  productadjlist.put(msg.getItem(), Arrays.asList(Type.values()));
         sale.setItemoccurancemap(productoccurancemap);
         sale.setItemnoofsales(productnoofsalesmap);
@@ -141,7 +141,7 @@ public class DataObjectTest {
         productoccurancemap.put(msg1.getItem(), msg1.getOccurances());
         productnoofsalesmap.put(msg1.getItem(), msg1.getOccurances());
         productpricemap.put(msg1.getItem(), msg1.getPrice());
-        adjustmentamtmap.put(type4, msg1.getPrice());
+      //  adjustmentamtmap.put(new Adjustment(msg1.getAdjustment()), msg1.getPrice());
        // productadjlist.put(msg1.getItem(),(String)Arrays.asList(Type.values()));
         sale.setItemoccurancemap(productoccurancemap);
         sale.setItemnoofsales(productnoofsalesmap);
@@ -176,7 +176,7 @@ public class DataObjectTest {
         productoccurancemap.put(msg2.getItem(), msg2.getOccurances());
         productnoofsalesmap.put(msg2.getItem(), msg2.getOccurances());
         productpricemap.put(msg2.getItem(), msg2.getPrice());
-        adjustmentamtmap.put(type1, msg2.getPrice());
+        adjustmentamtmap.put(new Adjustment(), msg2.getPrice());
      //   productadjlist.put(msg2.getItem(),Arrays.asList(Type.values()));
         sale.setItemoccurancemap(productoccurancemap);
         sale.setItemnoofsales(productnoofsalesmap);

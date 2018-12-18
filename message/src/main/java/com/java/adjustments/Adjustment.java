@@ -6,21 +6,25 @@ import com.java.product.Product;
 
 import java.util.*;
 
-import static java.util.Collections.frequency;
+
 
 public class Adjustment {
     private String name;
     private Type adjustmentType;
     private Double adjustmentAmount;
 
-    private Map<Type, Double> adjustmentAmountMap = adjustmentAmountMap = new HashMap<Type, Double>();
-    private Map<String, List<String>> itemadjustmentlistmap = new HashMap<String, List<String>>();
+    private Map<Adjustment, Double> adjustmentAmountMap = adjustmentAmountMap = new HashMap<Adjustment, Double>();
+    private Map<String, List<Type>> itemadjustmentlistmap = new HashMap<String, List<Type>>();
     private Map<String, Integer> productnoofadj = new HashMap<String, Integer>();
-    private Map<String, List<Adjustment>> itemadjmap=new HashMap<>();
+    private Map<String, List<Adjustment>> itemadjmap = new HashMap<>();
 
 
-    public Adjustment(){
+    public Adjustment() {
 
+    }
+
+    public Adjustment(Type adjustmentType) {
+        this.adjustmentType = adjustmentType;
     }
 
 
@@ -30,6 +34,7 @@ public class Adjustment {
         this.name = name;
 
     }
+
 
     public String getName() {
         return name;
@@ -47,11 +52,11 @@ public class Adjustment {
         this.productnoofadj = productnoofadj;
     }
 
-    public Map<String, List<String>> getItemadjustmentlistmap() {
+    public Map<String, List<Type>> getItemadjustmentlistmap() {
         return itemadjustmentlistmap;
     }
 
-    public void setItemadjustmentlistmap(Map<String, List<String>> itemadjustmentlistmap) {
+    public void setItemadjustmentlistmap(Map<String, List<Type>> itemadjustmentlistmap) {
         this.itemadjustmentlistmap = itemadjustmentlistmap;
     }
 
@@ -71,18 +76,19 @@ public class Adjustment {
         this.adjustmentAmount = adjustmentAmount;
     }
 
-    public Map<Type, Double> getAdjustmentAmountMap() {
+    public Map<Adjustment, Double> getAdjustmentAmountMap() {
         return adjustmentAmountMap;
     }
 
-    public void setAdjustmentAmountMap(Map<Type, Double> adjustmentAmountMap) {
+    public void setAdjustmentAmountMap(Map<Adjustment, Double> adjustmentAmountMap) {
         this.adjustmentAmountMap = adjustmentAmountMap;
     }
 
     @Override
     public String toString() {
         return "Adjustment{" +
-                "adjustmentAmountMap=" + adjustmentAmountMap +
+                "adjustmentType=" + adjustmentType +
+                ", productName=" + name +
                 '}';
     }
 
@@ -94,26 +100,29 @@ public class Adjustment {
         this.itemadjmap = itemadjmap;
     }
 
-    public void product_adjustmentcalculation(Map<String, Integer> mp, int count, Map<Type, Double> map, Message obj,Product p) {
+    public void product_adjustmentcalculation(Map<String, Integer> mp, int count, Map<Adjustment, Double> map, Message obj, Product p) {
         int i = 0;
         System.out.println("\n*******Application is pausing. A report of adjustments per sale will now be logged");
-
-
 
 
         for (Map.Entry<String, Integer> entry1 : mp.entrySet()) {
             i++;
 
-                System.out.println("\nProduct type " + ": " + entry1.getKey()+ " has total " + entry1.getValue()
-                        + " adjustments.");
+            System.out.println("\nProduct type " + ": " + entry1.getKey() + " has total " + entry1.getValue()
+                    + " adjustments.");
 
-            }
-        
+        }
+        for (Map.Entry<Adjustment, Double> entry2 : map.entrySet()) {
 
+            //  if(obj.getAdjustment() !="")
+            System.out.println(entry2.getKey().toString() + " Price---->" + entry2.getValue());
 
         }
 
+
     }
+
+}
 
 
 

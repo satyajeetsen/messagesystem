@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java" description="a.product_adjustmentcalculation(itemnoofadj, messa..." line="94" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java" description="a.product_adjustmentcalculation(itemnoofadj, messa..." line="97" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90b15dc3-f0b6-4cef-bfd5-65fb6d5d4692" name="Default Changelist" comment="" />
@@ -49,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="101" column="35" selection-start-line="101" selection-start-column="35" selection-end-line="101" selection-end-column="35" />
+            <state relative-caret-position="94">
+              <caret line="92" column="56" lean-forward="true" selection-start-line="92" selection-start-column="56" selection-end-line="92" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1361#1369#0" expanded="true" />
@@ -71,12 +71,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/java/adjustments/Adjustment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="110" column="8" selection-start-line="110" selection-start-column="8" selection-end-line="110" selection-end-column="8" />
+            <state relative-caret-position="37">
+              <caret line="95" column="47" lean-forward="true" selection-start-line="95" selection-start-column="47" selection-end-line="95" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#522#544#0" expanded="true" />
+                <element signature="e#490#510#0" expanded="true" />
                 <element signature="e#609#626#0" expanded="true" />
+                <element signature="e#744#745#0" expanded="true" />
+                <element signature="e#774#775#0" expanded="true" />
+                <element signature="e#1090#1091#0" expanded="true" />
+                <element signature="e#1120#1121#0" expanded="true" />
+                <element signature="e#1167#1168#0" expanded="true" />
+                <element signature="e#1205#1206#0" expanded="true" />
                 <element signature="e#1061#1062#0" expanded="true" />
                 <element signature="e#1088#1089#0" expanded="true" />
                 <element signature="e#1128#1129#0" expanded="true" />
@@ -118,8 +124,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/java/test/DataObjectTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="208" lean-forward="true" selection-start-line="208" selection-end-line="208" />
+            <state relative-caret-position="17">
+              <caret line="37" column="6" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -130,7 +136,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/java/Main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
+            <state relative-caret-position="47">
               <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -211,8 +217,8 @@
         <option value="$PROJECT_DIR$/src/test/resources/test.csv" />
         <option value="$PROJECT_DIR$/src/resources/java/test.csv" />
         <option value="$PROJECT_DIR$/src/main/java/com/java/product/Product.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/java/test/DataObjectTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/java/adjustments/Adjustment.java" />
       </list>
     </option>
@@ -225,8 +231,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-86" />
-    <option name="y" value="59" />
+    <option name="x" value="37" />
+    <option name="y" value="86" />
     <option name="width" value="1315" />
     <option name="height" value="630" />
   </component>
@@ -315,13 +321,6 @@
               <item name="message" type="b2602c69:ProjectViewProjectNode" />
               <item name="message" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="message" type="b2602c69:ProjectViewProjectNode" />
-              <item name="message" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -355,7 +354,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545137318131" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545164117674" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Git-2.20.0-64-bit.exe" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -481,7 +480,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-86" y="59" width="1315" height="630" extended-state="0" />
+    <frame x="-217" y="182" width="1315" height="630" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6846154" visible="true" weight="0.19760956" />
@@ -501,7 +500,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50080514" side_tool="true" weight="0.3294347" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.40065682" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.40040243" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -545,7 +544,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java</url>
-          <line>105</line>
+          <line>108</line>
           <properties />
           <option name="timeStamp" value="24" />
         </line-breakpoint>
@@ -599,7 +598,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java</url>
-          <line>94</line>
+          <line>97</line>
           <properties />
           <option name="timeStamp" value="107" />
         </line-breakpoint>
@@ -617,31 +616,37 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java</url>
-          <line>93</line>
+          <line>96</line>
           <properties />
           <option name="timeStamp" value="119" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java</url>
-          <line>91</line>
+          <line>94</line>
           <properties />
           <option name="timeStamp" value="120" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java</url>
-          <line>97</line>
-          <properties />
-          <option name="timeStamp" value="121" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java</url>
-          <line>88</line>
+          <line>90</line>
           <properties />
           <option name="timeStamp" value="123" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/java/adjustments/Adjustment.java</url>
+          <line>122</line>
+          <properties />
+          <option name="timeStamp" value="124" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java</url>
+          <line>104</line>
+          <properties />
+          <option name="timeStamp" value="125" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/java/adjustments/Adjustment.java</url>
-          <line>96</line>
+          <line>108</line>
           <properties class="com.java.adjustments.Adjustment" method="product_adjustmentcalculation">
             <option name="EMULATED" value="true" />
           </properties>
@@ -730,7 +735,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/java/Type/Type.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/java/type/Type.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
@@ -755,16 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/java/Main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -819,8 +814,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/java/test/DataObjectTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="208" lean-forward="true" selection-start-line="208" selection-end-line="208" />
+        <state relative-caret-position="17">
+          <caret line="37" column="6" lean-forward="true" selection-start-line="37" selection-start-column="6" selection-end-line="37" selection-end-column="6" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/java/Main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="47">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -829,8 +834,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="101" column="35" selection-start-line="101" selection-start-column="35" selection-end-line="101" selection-end-column="35" />
+        <state relative-caret-position="94">
+          <caret line="92" column="56" lean-forward="true" selection-start-line="92" selection-start-column="56" selection-end-line="92" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1361#1369#0" expanded="true" />
@@ -840,12 +845,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/java/adjustments/Adjustment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="94">
-          <caret line="110" column="8" selection-start-line="110" selection-start-column="8" selection-end-line="110" selection-end-column="8" />
+        <state relative-caret-position="37">
+          <caret line="95" column="47" lean-forward="true" selection-start-line="95" selection-start-column="47" selection-end-line="95" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#522#544#0" expanded="true" />
+            <element signature="e#490#510#0" expanded="true" />
             <element signature="e#609#626#0" expanded="true" />
+            <element signature="e#744#745#0" expanded="true" />
+            <element signature="e#774#775#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1120#1121#0" expanded="true" />
+            <element signature="e#1167#1168#0" expanded="true" />
+            <element signature="e#1205#1206#0" expanded="true" />
             <element signature="e#1061#1062#0" expanded="true" />
             <element signature="e#1088#1089#0" expanded="true" />
             <element signature="e#1128#1129#0" expanded="true" />

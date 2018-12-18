@@ -19,8 +19,8 @@ public class DataObjects {
     Product p = new Product();
     Map<String, Double> productpricemap = s.getItempricemap();
     Map<String, Integer> productoccurancemap = s.getItemoccurancemap();
-    Map<Type, Double> adjustmentamtmap = a.getAdjustmentAmountMap();
-    Map<String, List<String>> productadjlist = a.getItemadjustmentlistmap();
+    Map<Adjustment, Double> adjustmentamtmap = a.getAdjustmentAmountMap();
+    Map<String, List<Type>> productadjlist = a.getItemadjustmentlistmap();
     Map<String, Integer> productnoofsalesmap = s.getItemnoofsales();
     Map<String, Integer> itemnoofadj = a.getProductnoofadj();
     Map<String, List<Adjustment>> itemadjmap = a.getItemadjmap();
@@ -45,7 +45,7 @@ public class DataObjects {
             e.printStackTrace();
         }
         List<String> products = new ArrayList<String>();
-        List<String> adjlist = new ArrayList<>();
+        List<Type> adjlist = new ArrayList<>();
 
 //iterating over datalist
         for (Message msg : datalist) {
@@ -62,8 +62,10 @@ public class DataObjects {
                 type1 = Type.valueOf(msg.getAdjustment().toUpperCase());
                 a = new Adjustment(type1, msg.getPrice(), msg.getItem());
 //adding adjustment to list
-                adjlist.add(msg.getAdjustment());
+                adjlist.add(type1);
                 p.setAdjustment(type1);
+                a.setName(msg.getItem());
+
             }
 //adding item to product
             products.add(msg.getItem());
@@ -86,8 +88,9 @@ public class DataObjects {
 //calculating occurancesof an item in adjustment list
             //checks if not blank//
                if(m.getAdjustment()!="") {
-                   itemnoofadj.put(m.getItem(), Collections.frequency(adjlist, m.getAdjustment()));
+                   itemnoofadj.put(m.getItem(), Collections.frequency(adjlist, type1));
                    productadjlist.put(m.getAdjustment(), adjlist);
+                   adjustmentamtmap.put(a,m.getPrice());
                }
                 //  itemadjmap.put(m.getItem(),adjlist);
                 // productadjlist.put(m.getItem(), adjlist);
