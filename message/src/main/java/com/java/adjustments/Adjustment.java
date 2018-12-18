@@ -14,7 +14,7 @@ public class Adjustment {
     private Double adjustmentAmount;
 
     private Map<Adjustment, Double> adjustmentAmountMap = adjustmentAmountMap = new HashMap<Adjustment, Double>();
-   
+    private Map<String, List<Type>> itemadjustmentlistmap = new HashMap<String, List<Type>>();
     private Map<String, Integer> productnoofadj = new HashMap<String, Integer>();
     private Map<String, List<Adjustment>> itemadjmap = new HashMap<>();
 

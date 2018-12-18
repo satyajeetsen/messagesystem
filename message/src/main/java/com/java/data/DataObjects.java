@@ -21,7 +21,7 @@ public class DataObjects {
     private Map<String, Integer> productoccurancemap = s.getItemoccurancemap();
     private Map<Adjustment, Double> adjustmentamtmap = a.getAdjustmentAmountMap();
     private Map<String, Integer> itemnoofadj = a.getProductnoofadj();
-
+    private Map<String,Integer> productnoofsalesmap=s.getItemnoofsales();
 
     int message_counter = 0;
     Type type1 = null;
@@ -74,7 +74,7 @@ public class DataObjects {
                 // adding item and occurances to productoccurance map
                 productoccurancemap.put(m.getItem(), m.getOccurances());
             //calculating occurances of each item in product list
-         //   productnoofsalesmap.put(m.getItem(), Collections.frequency(products, m.getItem()));
+           productnoofsalesmap.put(m.getItem(), Collections.frequency(products, m.getItem()));
 
 
 
