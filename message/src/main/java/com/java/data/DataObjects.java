@@ -17,17 +17,13 @@ public class DataObjects {
     Adjustment a = new Adjustment();
     Message m;
     Product p = new Product();
-    Map<String, Double> productpricemap = s.getItempricemap();
-    Map<String, Integer> productoccurancemap = s.getItemoccurancemap();
-    Map<Adjustment, Double> adjustmentamtmap = a.getAdjustmentAmountMap();
-    Map<String, List<Type>> productadjlist = a.getItemadjustmentlistmap();
-    Map<String, Integer> productnoofsalesmap = s.getItemnoofsales();
-    Map<String, Integer> itemnoofadj = a.getProductnoofadj();
-    Map<String, List<Adjustment>> itemadjmap = a.getItemadjmap();
-    double total;
-    int message_counter = 0;
+    private Map<String, Double> productpricemap = s.getItempricemap();
+    private Map<String, Integer> productoccurancemap = s.getItemoccurancemap();
+    private Map<Adjustment, Double> adjustmentamtmap = a.getAdjustmentAmountMap();
+    private Map<String, Integer> itemnoofadj = a.getProductnoofadj();
 
-    private int counter;
+
+    int message_counter = 0;
     Type type1 = null;
 
     public DataObjects() {
@@ -44,7 +40,7 @@ public class DataObjects {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        List<String> products = new ArrayList<String>();
+        List<String> products = new ArrayList<>();
         List<Type> adjlist = new ArrayList<>();
 
 //iterating over datalist
@@ -72,13 +68,13 @@ public class DataObjects {
 
 
 //putting items and price into map object
-            productpricemap.put(m.getItem(), m.getPrice());
+           productpricemap.put(m.getItem(), m.getPrice());
             //check if occurances not equal to zero
             if (m.getOccurances() != 0)
                 // adding item and occurances to productoccurance map
                 productoccurancemap.put(m.getItem(), m.getOccurances());
             //calculating occurances of each item in product list
-            productnoofsalesmap.put(m.getItem(), Collections.frequency(products, m.getItem()));
+         //   productnoofsalesmap.put(m.getItem(), Collections.frequency(products, m.getItem()));
 
 
 
@@ -89,7 +85,7 @@ public class DataObjects {
             //checks if not blank//
                if(m.getAdjustment()!="") {
                    itemnoofadj.put(m.getItem(), Collections.frequency(adjlist, type1));
-                   productadjlist.put(m.getAdjustment(), adjlist);
+
                    adjustmentamtmap.put(a,m.getPrice());
                }
                 //  itemadjmap.put(m.getItem(),adjlist);

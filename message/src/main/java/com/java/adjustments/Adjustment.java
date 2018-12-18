@@ -88,7 +88,7 @@ public class Adjustment {
     public String toString() {
         return "Adjustment{" +
                 "adjustmentType=" + adjustmentType +
-                ", productName=" + name +
+                ", productName=" + name +", Adjustment Amount="+adjustmentAmount+
                 '}';
     }
 
