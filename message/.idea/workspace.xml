@@ -46,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="101" column="13" lean-forward="true" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
+            <state relative-caret-position="17">
+              <caret line="96" selection-start-line="96" selection-end-line="96" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -127,14 +127,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/java/test/DataObjectTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="91">
-              <caret line="133" column="9" lean-forward="true" selection-start-line="133" selection-start-column="9" selection-end-line="133" selection-end-column="9" />
+            <state relative-caret-position="240">
+              <caret line="202" lean-forward="true" selection-start-line="202" selection-end-line="202" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/java/test/MessageReaderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="28">
+              <caret line="22" column="61" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -147,15 +156,6 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/test.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="61" column="12" selection-start-line="57" selection-end-line="61" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -217,8 +217,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/java/data/DataReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/java/sale/Sale.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/java/adjustments/Adjustment.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/java/test/DataObjectTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/java/test/DataObjectTest.java" />
       </list>
     </option>
   </component>
@@ -337,7 +337,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545210765498" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545212412665" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Git-2.20.0-64-bit.exe" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -367,7 +367,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.DataObjectTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.java.Main.Main" />
       <module name="message" />
@@ -411,8 +411,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.DataObjectTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MessageReaderTest" />
       </list>
     </recent_temporary>
@@ -431,24 +431,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DataObjectTest - 2018.12.18 at 12h 36m 30s.xml">
-      <configuration name="DataObjectTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataObjectTest - 2018.12.18 at 12h 40m 32s.xml">
-      <configuration name="DataObjectTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataObjectTest - 2018.12.18 at 12h 40m 52s.xml">
-      <configuration name="DataObjectTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataObjectTest - 2018.12.19 at 08h 50m 56s.xml">
-      <configuration name="DataObjectTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataObjectTest - 2018.12.19 at 08h 59m 33s.xml">
-      <configuration name="DataObjectTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataObjectTest - 2018.12.19 at 09h 04m 14s.xml">
-      <configuration name="DataObjectTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DataObjectTest - 2018.12.19 at 09h 04m 50s.xml">
       <configuration name="DataObjectTest" configurationId="JUnit" />
     </history-entry>
@@ -459,6 +441,24 @@
       <configuration name="DataObjectTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="DataObjectTest - 2018.12.19 at 09h 09m 24s.xml">
+      <configuration name="DataObjectTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataObjectTest - 2018.12.19 at 09h 17m 32s.xml">
+      <configuration name="DataObjectTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataObjectTest - 2018.12.19 at 09h 22m 34s.xml">
+      <configuration name="DataObjectTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataObjectTest - 2018.12.19 at 09h 23m 07s.xml">
+      <configuration name="DataObjectTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataObjectTest - 2018.12.19 at 09h 33m 06s.xml">
+      <configuration name="DataObjectTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataObjectTest - 2018.12.19 at 09h 34m 12s.xml">
+      <configuration name="DataObjectTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataObjectTest - 2018.12.19 at 09h 34m 19s.xml">
       <configuration name="DataObjectTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -476,7 +476,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.1891348" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49919486" visible="true" weight="0.46633825" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.60965794" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.6091954" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -526,64 +526,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java</url>
-          <line>104</line>
-          <properties />
-          <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/java/test/DataObjectTest.java</url>
-          <line>172</line>
+          <line>175</line>
           <properties />
           <option name="timeStamp" value="62" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/java/test/DataObjectTest.java</url>
-          <line>126</line>
-          <properties />
-          <option name="timeStamp" value="85" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/java/test/DataObjectTest.java</url>
-          <line>106</line>
-          <properties />
-          <option name="timeStamp" value="86" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/java/test/DataObjectTest.java</url>
-          <line>91</line>
-          <properties />
-          <option name="timeStamp" value="90" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/java/test/DataObjectTest.java</url>
-          <line>92</line>
-          <properties />
-          <option name="timeStamp" value="91" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/com/java/test/DataObjectTest.java</url>
-          <line>100</line>
-          <properties />
-          <option name="timeStamp" value="92" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java</url>
           <line>92</line>
           <properties />
           <option name="timeStamp" value="107" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java</url>
-          <line>62</line>
-          <properties />
-          <option name="timeStamp" value="116" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java</url>
-          <line>59</line>
-          <properties />
-          <option name="timeStamp" value="117" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java</url>
@@ -598,22 +550,16 @@
           <option name="timeStamp" value="120" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java</url>
-          <line>85</line>
-          <properties />
-          <option name="timeStamp" value="123" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/java/adjustments/Adjustment.java</url>
           <line>129</line>
           <properties />
           <option name="timeStamp" value="124" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java</url>
-          <line>99</line>
+          <url>file://$PROJECT_DIR$/src/test/java/com/java/test/DataObjectTest.java</url>
+          <line>137</line>
           <properties />
-          <option name="timeStamp" value="125" />
+          <option name="timeStamp" value="126" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/java/adjustments/Adjustment.java</url>
@@ -710,13 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/java/test/MessageReaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="22" column="61" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -833,20 +772,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/java/test/DataObjectTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/java/test/MessageReaderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="91">
-          <caret line="133" column="9" lean-forward="true" selection-start-line="133" selection-start-column="9" selection-end-line="133" selection-end-column="9" />
+        <state relative-caret-position="28">
+          <caret line="22" column="61" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/java/test/DataObjectTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="101" column="13" lean-forward="true" selection-start-line="101" selection-start-column="13" selection-end-line="101" selection-end-column="13" />
+        <state relative-caret-position="240">
+          <caret line="202" lean-forward="true" selection-start-line="202" selection-end-line="202" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
