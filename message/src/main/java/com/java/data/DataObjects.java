@@ -34,10 +34,10 @@ public class DataObjects {
 
     public List<Message> readingDataObjects() throws Exception {
 //reading from a file
-        File testFile = new File("src/resources/java/message.csv");
+        File messageFile = new File("src/resources/java/message.csv");
         List<Message> datalist = null;
         try {
-            datalist = new DataReader().readFile(testFile);
+            datalist = new DataReader().readFile(messageFile);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -125,7 +125,7 @@ public class DataObjectTest {
 
             assertEquals(1, productoccurancemap.get(msg.getItem()).intValue());
             assert (sale.getItemoccurancemap().containsValue(msg.getOccurances()));
-
+            assert(sale.getItempricemap().containsValue(msg.getPrice()));
             assert (ad.getAdjustmentAmountMap().containsKey(ad.getAdjustmentType()));
             assert (ad.getAdjustmentAmountMap().containsValue(msg.getPrice()));
             assertEquals(20.0, sale.getItempricemap().get(msg.getItem()));
