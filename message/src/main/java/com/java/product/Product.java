@@ -16,6 +16,7 @@ public class Product {
     private Type adjustment;
 
     private Map<Product, List<Adjustment>>  productlistadjmap = new HashMap<>();
+
     public Product() {
 
     }
@@ -46,6 +47,8 @@ public class Product {
     public Map<Product, List<Adjustment>> getProductlistadjmap() {
         return productlistadjmap;
     }
+
+
 
     public void setProductlistadjmap(Map<Product, List<Adjustment>> productlistadjmap) {
         this.productlistadjmap = productlistadjmap;

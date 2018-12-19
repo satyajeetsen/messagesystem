@@ -47,7 +47,7 @@ public class DataObjectTest {
     Map<String, Double> productpricemap = sale.getItempricemap();
     Map<String, Integer> productoccurancemap = sale.getItemoccurancemap();
     Map<Adjustment, Double> adjustmentamtmap = ad.getAdjustmentAmountMap();
-    Map<String, List<Type>> productadjlist = ad.getItemadjustmentlistmap();
+
     Map<String, Integer> productnoofsalesmap = sale.getItemnoofsales();
     Type type1 = Type.ADD;
     Type type2 = Type.SUBTRACT;
@@ -125,8 +125,7 @@ public class DataObjectTest {
 
             assertEquals(1, productoccurancemap.get(msg.getItem()).intValue());
             assert (sale.getItemoccurancemap().containsValue(msg.getOccurances()));
-            assert (ad.getItemadjustmentlistmap().containsKey(msg.getItem()));
-            assert (ad.getItemadjustmentlistmap().containsValue(Arrays.asList(Type.values())));
+
             assert (ad.getAdjustmentAmountMap().containsKey(ad.getAdjustmentType()));
             assert (ad.getAdjustmentAmountMap().containsValue(msg.getPrice()));
             assertEquals(20.0, sale.getItempricemap().get(msg.getItem()));
@@ -160,8 +159,7 @@ public class DataObjectTest {
 
             assertEquals(4, productoccurancemap.get(msg1.getItem()).intValue());
             assert (sale.getItemoccurancemap().containsValue(msg1.getOccurances()));
-            assert (ad.getItemadjustmentlistmap().containsKey(msg1.getItem()));
-            assert (ad.getItemadjustmentlistmap().containsValue(Arrays.asList(Type.values())));
+
             assert (ad.getAdjustmentAmountMap().containsKey(ad.getAdjustmentType()));
             assert (ad.getAdjustmentAmountMap().containsValue(msg1.getPrice()));
             assertEquals(30.0, sale.getItempricemap().get(msg1.getItem()));
@@ -196,8 +194,7 @@ public class DataObjectTest {
 
         assertEquals(2, productoccurancemap.get(msg2.getItem()).intValue());
         assert (sale.getItemoccurancemap().containsValue(msg2.getOccurances()));
-        assert (ad.getItemadjustmentlistmap().containsKey(msg2.getItem()));
-        assert (ad.getItemadjustmentlistmap().containsValue(Arrays.asList(Type.values())));
+
         assert (ad.getAdjustmentAmountMap().containsKey(ad.getAdjustmentType()));
         assert (ad.getAdjustmentAmountMap().containsValue(msg2.getPrice()));
         assertEquals(10.0, productpricemap.get(msg2.getItem()));

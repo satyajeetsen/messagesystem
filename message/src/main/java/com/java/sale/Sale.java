@@ -37,7 +37,8 @@ public class Sale {
     public void setItemoccurancemap(Map<String, Integer> itemoccurancemap) {
         this.itemoccurancemap = itemoccurancemap;
     }
-//calculate sales calculation for each product
+
+    //calculate sales calculation for each product
     public void product_salescalculation(int count) {
 
 
