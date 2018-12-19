@@ -113,20 +113,25 @@ public class DataObjectTest {
         sale.setItempricemap(productpricemap);
       //  ad.setItemadjustmentlistmap(productadjlist);
         ad.setAdjustmentAmountMap(adjustmentamtmap);
+
         pr.setName(msg.getItem());
         pr.setPrice(msg.getPrice());
-        sale.setProduct(pr);
-        if (!msg.getAdjustment().isEmpty())
-            ad.setAdjustmentType(type4);
-        ad.setAdjustmentAmount(msg.getPrice());
 
+
+        sale.setProduct(pr);
+        if (msg.getAdjustment() !="") {
+            ad.setAdjustmentType(type1);
+            ad.setAdjustmentAmount(msg.getPrice());
+            ad.setName(msg.getItem());
+
+        }
         if (msg.getOccurances() == 1) {
             // System.out.println(sale.getItemoccurancemap().get(msg.getItem()));
 
             assertEquals(1, productoccurancemap.get(msg.getItem()).intValue());
             assert (sale.getItemoccurancemap().containsValue(msg.getOccurances()));
             assert(sale.getItempricemap().containsValue(msg.getPrice()));
-            assert (ad.getAdjustmentAmountMap().containsKey(ad.getAdjustmentType()));
+//            assert (ad.getAdjustmentAmountMap().containsKey(ad));
             assert (ad.getAdjustmentAmountMap().containsValue(msg.getPrice()));
             assertEquals(20.0, sale.getItempricemap().get(msg.getItem()));
 

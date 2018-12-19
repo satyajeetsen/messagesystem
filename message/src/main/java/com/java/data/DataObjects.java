@@ -48,7 +48,7 @@ public class DataObjects {
         for (Message msg : datalist) {
             ++message_counter;
 //instantiating message object
-            m = new Message(msg.getItem(), msg.getOccurances(), msg.getPrice(),
+             new Message(msg.getItem(), msg.getOccurances(), msg.getPrice(),
                     msg.getAdjustment());
             p = new Product();
             p.setName(msg.getItem());
@@ -70,22 +70,22 @@ public class DataObjects {
 
 
 //putting items and price into map object
-            productpricemap.put(m.getItem(), m.getPrice());
+            productpricemap.put(msg.getItem(), msg.getPrice());
             //check if occurances not equal to zero
-            if (m.getOccurances() != 0)
+            if (msg.getOccurances() != 0)
                 // adding item and occurances to productoccurance map
-                productoccurancemap.put(m.getItem(), m.getOccurances());
+                productoccurancemap.put(msg.getItem(), msg.getOccurances());
             //calculating occurances of each item in product list
-            productnoofsalesmap.put(m.getItem(), Collections.frequency(products, m.getItem()));
+            productnoofsalesmap.put(msg.getItem(), Collections.frequency(products, msg.getItem()));
 
 
             //adjustmentamtmap.put(type1, m.getPrice());
 //calculating occurancesof an item in adjustment list
             //checks if not blank//
-            if (m.getAdjustment() != "") {
-                itemnoofadj.put(m.getItem(), Collections.frequency(adjlist, type1));
+            if (msg.getAdjustment() != "") {
+                itemnoofadj.put(msg.getItem(), Collections.frequency(adjlist, type1));
 
-                adjustmentamtmap.put(a, m.getPrice());
+                adjustmentamtmap.put(a, msg.getPrice());
             }
             //  itemadjmap.put(m.getItem(),adjlist);
             // productadjlist.put(m.getItem(), adjlist);
