@@ -20,7 +20,7 @@ public class MessageReaderTest extends ExternalResource {
 
     @Test
     public List<Message> testReadingPersonObjectsFromCsvData() throws Exception {
-        File testFile = new File("src/test/resources/test.csv");
+        File testFile = new File("src/test/resources/message.csv");
         List<Message> datalist = dr.readFile(testFile);
         assertEquals(62, datalist.size());
 

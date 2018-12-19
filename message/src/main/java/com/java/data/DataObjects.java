@@ -34,7 +34,7 @@ public class DataObjects {
 
     public List<Message> readingDataObjects() throws Exception {
 //reading from a file
-        File testFile = new File("src/resources/java/test.csv");
+        File testFile = new File("src/resources/java/message.csv");
         List<Message> datalist = null;
         try {
             datalist = new DataReader().readFile(testFile);
