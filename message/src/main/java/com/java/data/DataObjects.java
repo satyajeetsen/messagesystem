@@ -12,8 +12,7 @@ import com.java.sale.Sale;
 import java.io.File;
 import java.util.*;
 
-
-public class DataObjects {
+public class DataObjects  {
     Sale s = new Sale();
     Adjustment a = new Adjustment();
     Message m;
@@ -26,6 +25,9 @@ public class DataObjects {
 
     int message_counter = 0;
     Type type1 = null;
+    List<String> products = new ArrayList<>();
+    List<Type> adjlist = new ArrayList<>();
+    int i=0;
 
     public DataObjects() {
 
@@ -41,15 +43,13 @@ public class DataObjects {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        List<String> products = new ArrayList<>();
-        List<Type> adjlist = new ArrayList<>();
+
 
 //iterating over datalist
         for (Message msg : datalist) {
             ++message_counter;
-//instantiating message object
-             new Message(msg.getItem(), msg.getOccurances(), msg.getPrice(),
-                    msg.getAdjustment());
+
+
             p = new Product();
             p.setName(msg.getItem());
             p.setPrice(msg.getPrice());
@@ -83,12 +83,13 @@ public class DataObjects {
 //calculating occurancesof an item in adjustment list
             //checks if not blank//
             if (msg.getAdjustment() != "") {
-                itemnoofadj.put(msg.getItem(), Collections.frequency(adjlist, type1));
+                for(int j=0;j<adjlist.size();j++)
+                itemnoofadj.put(msg.getItem(), Collections.frequency(adjlist,type1));
 
                 adjustmentamtmap.put(a, msg.getPrice());
+
             }
-            //  itemadjmap.put(m.getItem(),adjlist);
-            // productadjlist.put(m.getItem(), adjlist);
+
 
 
             //for every 10processed list or message put a logger alert
@@ -97,8 +98,9 @@ public class DataObjects {
             }
             //for every 50 processed list or message put logger alert to stop receiving messages
             if (message_counter % 50 == 0) {
+
                 a.product_adjustmentcalculation(itemnoofadj, message_counter, adjustmentamtmap, m, p);
-                //   s.product_salescalculation(message_counter);
+
             }
 
 
@@ -108,9 +110,10 @@ public class DataObjects {
         return datalist;
 
     }
-
-
 }
+
+
+
 
 
 

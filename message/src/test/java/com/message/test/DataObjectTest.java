@@ -1,16 +1,14 @@
-package com.java.test;
+package com.message.test;
 
 import com.java.Type.Type;
 import com.java.adjustments.Adjustment;
 import com.java.data.DataObjects;
-import com.java.data.DataReader;
 import com.java.message.Message;
 import com.java.product.Product;
 import com.java.sale.Sale;
 
 import org.junit.Test;
 
-import java.io.IOException;
 import java.util.*;
 
 import static junit.framework.TestCase.assertEquals;

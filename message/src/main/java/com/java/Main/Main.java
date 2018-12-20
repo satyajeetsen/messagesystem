@@ -1,10 +1,8 @@
-package com.java.Main;
+package com.java.main;
 
 
-import com.java.adjustments.Adjustment;
 import com.java.data.DataObjects;
 import com.java.message.Message;
-import com.java.product.Product;
 import com.java.sale.Sale;
 
 
