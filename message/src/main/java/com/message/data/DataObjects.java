@@ -11,10 +11,10 @@ import com.message.sale.Sale;
 import java.io.File;
 import java.util.*;
 
-public class DataObjects  {
+public class DataObjects {
     Sale s = new Sale();
     Adjustment a = new Adjustment();
-    Message m;
+
     Product p = new Product();
     private Map<String, Double> productpricemap = s.getItempricemap();
     private Map<String, Integer> productoccurancemap = s.getItemoccurancemap();
@@ -26,7 +26,7 @@ public class DataObjects  {
     Type type1 = null;
     List<String> products = new ArrayList<>();
     List<Type> adjlist = new ArrayList<>();
-    int i=0;
+    int i = 0;
 
     public DataObjects() {
 
@@ -78,17 +78,16 @@ public class DataObjects  {
             productnoofsalesmap.put(msg.getItem(), Collections.frequency(products, msg.getItem()));
 
 
-            //adjustmentamtmap.put(type1, m.getPrice());
+
 //calculating occurancesof an item in adjustment list
             //checks if not blank//
             if (msg.getAdjustment() != "") {
-                for(int j=0;j<adjlist.size();j++)
-                itemnoofadj.put(msg.getItem(), Collections.frequency(adjlist,type1));
+                for (int j = 0; j < adjlist.size(); j++)
+                    itemnoofadj.put(msg.getItem(), Collections.frequency(adjlist, type1));
 
                 adjustmentamtmap.put(a, msg.getPrice());
 
             }
-
 
 
             //for every 10processed list or message put a logger alert
@@ -98,7 +97,7 @@ public class DataObjects  {
             //for every 50 processed list or message put logger alert to stop receiving messages
             if (message_counter % 50 == 0) {
 
-                a.product_adjustmentcalculation(itemnoofadj, message_counter, adjustmentamtmap, m, p);
+                a.product_adjustmentcalculation(itemnoofadj, message_counter, adjustmentamtmap);
 
             }
 
