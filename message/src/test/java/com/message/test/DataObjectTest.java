@@ -1,11 +1,11 @@
 package com.message.test;
 
-import com.java.Type.Type;
-import com.java.adjustments.Adjustment;
-import com.java.data.DataObjects;
-import com.java.message.Message;
-import com.java.product.Product;
-import com.java.sale.Sale;
+import com.message.Type.Type;
+import com.message.adjustments.Adjustment;
+import com.message.data.DataObjects;
+import com.message.message.Message;
+import com.message.product.Product;
+import com.message.sale.Sale;
 
 import org.junit.Test;
 
@@ -16,8 +16,6 @@ import static org.junit.Assert.assertThat;
 
 public class DataObjectTest {
 
-
-    MessageReaderTest mrt = new MessageReaderTest();
     DataObjects d = new DataObjects();
     Adjustment ad = new Adjustment();
     Adjustment ad1 = new Adjustment();

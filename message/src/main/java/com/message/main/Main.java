@@ -1,9 +1,9 @@
-package com.java.main;
+package com.message.main;
 
 
-import com.java.data.DataObjects;
-import com.java.message.Message;
-import com.java.sale.Sale;
+import com.message.data.DataObjects;
+import com.message.message.Message;
+import com.message.sale.Sale;
 
 
 import java.util.List;

@@ -1,13 +1,11 @@
-package com.java.product;
+package com.message.product;
 
-import com.java.Type.Type;
-import com.java.adjustments.Adjustment;
-import com.java.sale.Sale;
+import com.message.Type.Type;
+import com.message.adjustments.Adjustment;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Objects;
 
 public class Product {
 

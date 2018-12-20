@@ -1,4 +1,4 @@
-package com.java.message;
+package com.message.message;
 
 
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;

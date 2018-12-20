@@ -1,8 +1,8 @@
-package com.java.data;
+package com.message.data;
 
 import com.fasterxml.jackson.databind.MappingIterator;
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
-import com.java.message.Message;
+import com.message.message.Message;
 
 import java.io.File;
 import java.util.List;

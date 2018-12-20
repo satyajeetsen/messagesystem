@@ -1,6 +1,6 @@
-package com.java.sale;
+package com.message.sale;
 
-import com.java.product.Product;
+import com.message.product.Product;
 
 import java.util.*;
 

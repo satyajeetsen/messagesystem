@@ -1,12 +1,11 @@
-package com.java.data;
+package com.message.data;
 
 
-import com.java.Type.Type;
-import com.java.adjustments.Adjustment;
-import com.java.message.Message;
-import com.java.product.Product;
-import com.java.product.ProductType;
-import com.java.sale.Sale;
+import com.message.Type.Type;
+import com.message.adjustments.Adjustment;
+import com.message.message.Message;
+import com.message.product.Product;
+import com.message.sale.Sale;
 
 
 import java.io.File;
@@ -36,7 +35,7 @@ public class DataObjects  {
 
     public List<Message> readingDataObjects() throws Exception {
 //reading from a file
-        File messageFile = new File("src/resources/java/message.csv");
+        File messageFile = new File("src/resources/message/message.csv");
         List<Message> datalist = null;
         try {
             datalist = new DataReader().readFile(messageFile);

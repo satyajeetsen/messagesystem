@@ -1,13 +1,10 @@
-package com.java.adjustments;
+package com.message.adjustments;
 
-import com.java.Type.Type;
-import com.java.message.Message;
-import com.java.product.Product;
-import com.java.product.ProductType;
+import com.message.Type.Type;
+import com.message.message.Message;
+import com.message.product.Product;
 
 import java.util.*;
-
-import static com.java.product.ProductType.IPAD;
 
 
 public class Adjustment {

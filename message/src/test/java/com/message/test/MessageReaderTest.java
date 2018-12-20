@@ -5,13 +5,11 @@ import static org.junit.Assert.assertEquals;
 import java.io.File;
 import java.util.List;
 
-import com.java.message.Message;
-import org.junit.Rule;
+import com.message.message.Message;
 import org.junit.Test;
 
-import com.java.data.DataReader;
+import com.message.data.DataReader;
 import org.junit.rules.ExternalResource;
-import org.junit.rules.TemporaryFolder;
 
 public class MessageReaderTest extends ExternalResource {
 
