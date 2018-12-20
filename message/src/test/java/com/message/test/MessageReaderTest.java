@@ -19,15 +19,15 @@ public class MessageReaderTest extends ExternalResource {
     DataReader dr = new DataReader();
 
     @Test
-    public List<Message> testReadingPersonObjectsFromCsvData() throws Exception {
-        File testFile = new File("src/test/resources/message.csv");
+    public void testReadingPersonObjectsFromCsvData() throws Exception {
+        File testFile = new File("src/test/resources/test.csv");
         List<Message> datalist = dr.readFile(testFile);
         assertEquals(62, datalist.size());
 
 
         Message dt1 = datalist.get(0);
         assertEquals("LAPTOP", dt1.getItem());
-        assertEquals(0, dt1.getOccurances());
+        assertEquals(1, dt1.getOccurances());
         assertEquals(20.0, dt1.getPrice(), 0);
         assertEquals("", dt1.getAdjustment());
 
@@ -57,6 +57,6 @@ public class MessageReaderTest extends ExternalResource {
         assertEquals(50.0, dt5.getPrice(), 0);
         assertEquals("", dt5.getAdjustment());
 
-        return datalist;
+
     }
 }

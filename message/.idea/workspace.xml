@@ -46,7 +46,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="40">
@@ -130,8 +130,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/message/test/DataObjectTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="172" column="9" selection-start-line="162" selection-start-column="37" selection-end-line="172" selection-end-column="9" />
+            <state relative-caret-position="17">
+              <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,11 +139,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/message/test/MessageReaderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="22" column="61" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="61" />
+            <state relative-caret-position="65">
+              <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -219,6 +219,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/java/sale/Sale.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/java/adjustments/Adjustment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/java/data/DataObjects.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/message/test/MessageReaderTest.java" />
       </list>
     </option>
   </component>
@@ -309,15 +310,7 @@
               <item name="message" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="message" type="b2602c69:ProjectViewProjectNode" />
-              <item name="message" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -328,7 +321,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545265321941" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545265632266" />
     <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Git-2.20.0-64-bit.exe" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -358,7 +351,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.DataObjectTest (1)">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.java.main.Main" />
       <module name="message" />
@@ -368,6 +361,20 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataObjectTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="message" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.message.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.message.test" />
+      <option name="MAIN_CLASS_NAME" value="com.message.test.DataObjectTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -382,6 +389,20 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.java.test" />
       <option name="MAIN_CLASS_NAME" value="com.java.test.DataObjectTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MessageReaderTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="message" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.message.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.message.test" />
+      <option name="MAIN_CLASS_NAME" value="com.message.test.MessageReaderTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -402,8 +423,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.DataObjectTest (1)" />
+        <item itemvalue="JUnit.MessageReaderTest (1)" />
         <item itemvalue="JUnit.DataObjectTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MessageReaderTest" />
       </list>
     </recent_temporary>
@@ -422,18 +445,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DataObjectTest - 2018.12.19 at 09h 07m 30s.xml">
-      <configuration name="DataObjectTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataObjectTest - 2018.12.19 at 09h 08m 55s.xml">
-      <configuration name="DataObjectTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataObjectTest - 2018.12.19 at 09h 09m 24s.xml">
-      <configuration name="DataObjectTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="DataObjectTest - 2018.12.19 at 09h 17m 32s.xml">
-      <configuration name="DataObjectTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DataObjectTest - 2018.12.19 at 09h 22m 34s.xml">
       <configuration name="DataObjectTest" configurationId="JUnit" />
     </history-entry>
@@ -451,6 +462,18 @@
     </history-entry>
     <history-entry file="DataObjectTest - 2018.12.19 at 09h 40m 27s.xml">
       <configuration name="DataObjectTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataObjectTest - 2018.12.20 at 00h 23m 05s.xml">
+      <configuration name="DataObjectTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DataObjectTest_(1) - 2018.12.20 at 00h 23m 30s.xml">
+      <configuration name="DataObjectTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MessageReaderTest_(1) - 2018.12.20 at 00h 23m 44s.xml">
+      <configuration name="MessageReaderTest (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MessageReaderTest_(1) - 2018.12.20 at 00h 25m 09s.xml">
+      <configuration name="MessageReaderTest (1)" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -684,23 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/message/test/MessageReaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="22" column="61" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/message/test/DataObjectTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="172" column="9" selection-start-line="162" selection-start-column="37" selection-end-line="172" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/java/sale/Sale.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -775,6 +781,23 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/message/test/DataObjectTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/message/test/MessageReaderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
         </state>
       </provider>
     </entry>
